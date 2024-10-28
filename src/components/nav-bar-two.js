@@ -129,7 +129,7 @@ export class NavbarTwo extends LitElement {
                 <a
                   href="https://wa.me/919550075162"
                   target="_blank"
-                  class="bg-[#724cc4] text-white py-2 px-4  hover:bg-green-600 transition-colors"
+                  class="bg-[var(--primary-color)] text-white py-2 px-4  hover:bg-green-600 transition-colors"
                 >
                   WhatsApp Now
                 </a>
@@ -160,7 +160,7 @@ export class NavbarTwo extends LitElement {
               <li>
                 <a
                   href="https://wa.me/919550075162"
-                  class="bg-[#724cc4] text-white py-2 px-4 rounded hover:bg-green-600 transition-colors"
+                  class="bg-[var(--primary-color)] text-white py-2 px-4 rounded hover:bg-green-600 transition-colors"
                   @click="${this.closeMenu}"
                 >
                   WhatsApp Now

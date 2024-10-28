@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --primary-color: #724cc4; /* Replace with your desired primary color */
+  --secondary-color: bg-black; /* Replace with your desired secondary color */
+}

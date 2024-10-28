@@ -1,4 +1,5 @@
 import { LitElement, html } from "lit";
+import { textContent } from "../content/text-content.js";
 import Marquee3k from "marquee3000"; // Import Marquee3k
 
 class HeroSection extends LitElement {
@@ -9,6 +10,17 @@ class HeroSection extends LitElement {
 
   render() {
     return html`
+      <div
+        class="fixed left-0 top-0 z-50 flex w-[30px] items-center justify-center bg-gray-200 py-[2.5px] text-[12px] uppercase text-black sm:bg-red-200 md:bg-yellow-200 lg:bg-green-200 xl:bg-blue-200 2xl:bg-pink-200"
+      >
+        <span class="block sm:hidden">all</span>
+        <span class="hidden sm:block md:hidden">sm</span>
+        <span class="hidden md:block lg:hidden">md</span>
+        <span class="hidden lg:block xl:hidden">lg</span>
+        <span class="hidden xl:block 2xl:hidden">xl</span>
+        <span class="hidden 2xl:block">2xl</span>
+      </div>
+
       <section class="bg-white">
         <div class="grid grid-cols-1  md:grid-cols-2 mx-auto">
           <!-- Image Column -->
@@ -29,7 +41,7 @@ class HeroSection extends LitElement {
               <div class="p-4 sm:p-6 lg:p-8">
                 <div class="flex items-center">
                   <h2 class="font-bold text-white text-7xl ml-2.5">
-                    Over 500+
+                    ${textContent.heroSection.imageCTA}
                   </h2>
                   <svg
                     class="w-10 h-10 text-[#724cc4]"
@@ -45,8 +57,7 @@ class HeroSection extends LitElement {
                   </svg>
                 </div>
                 <p class="max-w-xs mt-1.5 text-xl pl-4 text-white">
-                  Businesses Trust Us for Expert Accounting, Tax Solutions, and
-                  Timely Compliance
+                  ${textContent.heroSection.imageCTA2}
                 </p>
               </div>
             </div>
@@ -57,20 +68,16 @@ class HeroSection extends LitElement {
             class=" flex flex-col items-center justify-center md:items-start pt-24 pr-4 pl-4 md:pl-10 md:pt-40 md:pb-20 lg:pt-40 lg:pr-20 lg:pl-6 lg:pb-0 text-center md:text-left order-1 md:order-2"
           >
             <div>
-              <div class="pl-4 pr-4 md:pl-10 md:pr-10 md:p-0">
+              <div class="pl-4 pr-4 md:pl-0 md:pr-10 md:p-0 xl:pl-0 lg:pl-0">
                 <h1
                   class="font-inter tracking-tighter text-3xl  font-bold text-[#433232] md:text-4xl xl:text-5xl"
                 >
-                  Expert Chartered Accountant Services for Your Business Growth
+                  ${textContent.heroSection.title}
                 </h1>
                 <p
-                  class="mt-8 text-lg font-inter font-medium tracking-tight text-[#464442]"
+                  class="mt-4 md:mt-8 text-md md:text-lg font-inter font-medium tracking-tight text-[#464442]"
                 >
-                  Whether you are a startup, small business, or a large
-                  enterprise, we provide expert financial and tax services
-                  tailored to your needs. From bookkeeping to tax filings and
-                  financial consulting, our team ensures your business stays
-                  compliant and financially healthy
+                  ${textContent.heroSection.body}
                 </p>
               </div>
 
@@ -86,32 +93,32 @@ class HeroSection extends LitElement {
                       <span
                         class="marquee3k__copy border-solid border-2 border-gray-300 bg-white mx-2 px-4 py-2 text-black whitespace-nowrap"
                       >
-                        Tax Planning & Advisory
+                        ${textContent.heroSection.marqueeitem1}
                       </span>
                       <span
                         class="marquee3k__copy border-solid border-2 border-gray-300 bg-white mx-2 px-4 py-2 text-black whitespace-nowrap"
                       >
-                        GST Filing & Compliance
+                        ${textContent.heroSection.marqueeitem2}
                       </span>
                       <span
                         class="marquee3k__copy border-solid border-2 border-gray-300 bg-white mx-2 px-4 py-2 text-black whitespace-nowrap"
                       >
-                        Bookkeeping & Accounting
+                        ${textContent.heroSection.marqueeitem3}
                       </span>
                       <span
                         class="marquee3k__copy border-solid border-2 border-gray-300 bg-white mx-2 px-4 py-2 text-black whitespace-nowrap"
                       >
-                        Company Incorporation & Registration
+                        ${textContent.heroSection.marqueeitem4}
                       </span>
                       <span
                         class="marquee3k__copy border-solid border-2 border-gray-300 bg-white mx-2 px-4 py-2 text-black whitespace-nowrap"
                       >
-                        Income Tax Filing
+                        ${textContent.heroSection.marqueeitem5}
                       </span>
                       <span
                         class="marquee3k__copy border-solid border-2 border-gray-300 bg-white mx-2 px-4 py-2 text-black whitespace-nowrap"
                       >
-                        Financial Statement Preparation
+                        ${textContent.heroSection.marqueeitem6}
                       </span>
                     </div>
                   </div>
@@ -123,9 +130,10 @@ class HeroSection extends LitElement {
               <div
                 class="bg-purple-100 text-black py-2 px-4 rounded-md mt-4 text-center font-semibold shadow-lg"
               >
-                <span class="text-[#724cc4]">Most trusted CA firms, </span>
-                known for its expert financial solutions and personalized
-                services
+                <span class="text-[#724cc4]"
+                  >${textContent.heroSection.subheading}
+                </span>
+                ${textContent.heroSection.subheadingSpan}
               </div>
             </div>
 
@@ -138,13 +146,13 @@ class HeroSection extends LitElement {
                 aria-label="Whatsapp"
                 class="bg-[#724cc4] text-white py-3 px-6 w-48 text-center hover:bg-green-600 transition whitespace-normal transition:background-color 0.3s ease shadow-lg"
               >
-                Whatsapp Enquiry
+                ${textContent.heroSection.ctaButton1}
               </a>
               <a
                 href="tel:+919550075162"
                 class="bg-black text-white py-3 px-6 w-60 text-center hover:bg-gray-700 transition whitespace-normal transition:background-color 0.3s ease shadow-lg"
               >
-                Call: +91 9550075162
+                ${textContent.heroSection.ctaButton2}
               </a>
             </div>
           </div>
